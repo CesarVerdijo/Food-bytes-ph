@@ -1,0 +1,201 @@
+@media screen and (max-width: 480px) {
+    .logo{
+        margin-left: 0;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    main{
+        grid-template-columns: 1fr;
+    }
+    
+    label{
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+    header{
+        padding: 5px;
+        z-index: 1;
+}
+    nav{
+        position: absolute;
+        background: rgba(0, 0, 0, 0.866);
+        top: 70px;
+        right: 13px;
+        width: 190px;
+        padding: 10px;
+        border-radius: 10px;
+        visibility: hidden;
+        opacity: 0;
+        transition: .4s ease;
+    }
+    nav ul li a{
+        font-weight: 700;
+    }
+    nav ul li a, nav label{
+        color: rgb(252, 252, 252);
+    }
+    nav label{
+        text-align: right;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    input:checked ~ nav{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* home */
+
+    .home-recipe-about-contact-section{
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr;
+        max-width: 50%;
+
+    }
+    .home{
+        height: inherit;
+        max-width: 100%;
+        display: grid;
+        grid-template-rows: 1fr 400px;
+        grid-template-columns: 1fr;
+    }
+    .hometext h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    .hometext p{
+        text-align: center;
+        font-size: 25px;
+        padding: 0 5px 0 7px;
+        overflow: hidden;
+    }
+    video{
+        width: 469px;
+        padding: 0 5px 0 5px;
+    }
+    .explore{
+        top: 71%;
+        left: 35%;
+    }
+    .video-container .video{
+        border-radius: 20px;
+    }
+    .popular-recipe-container{
+        text-align: center;
+        font-size: 25px;
+        border: none;
+        margin-top: 25px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 470px;
+        padding: 8px;
+    }
+    .food-name, .food-name3{
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+    }
+    .food-name img,
+    .food-name3 img{
+        display: none;
+    }
+ /* recipe */
+
+.description{
+    border-top: 1px solid white;
+    font-size: 33px;
+    text-align: center;
+}.pics{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0;
+}
+.grid-item img{
+    width: 50%;
+    height: 50%;
+    border-radius: 3%;
+}
+.grid-item{
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* home */
+        /* .home-recipe-about-contact-section{
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        width: 420px;
+    }
+    .home{
+        width: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+
+    }
+    .home-content{
+        max-width: 480px;
+        grid-row: 1/2;
+        padding: 0 3px 0 3px;
+    }
+    .hometext h1{
+        margin-left: 30px;
+        max-width: 400px;
+        text-align: center;
+
+    }
+    .hometext p{
+        max-width: 380px;
+        text-align: center;
+    }
+    .popular-recipe-container{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding: 5px 0 0 0;
+        border-left: none;
+    }
+    .video-container .video{
+        border-radius: 20px;
+        box-shadow: 2px 6px 25px 6px #000000;
+    }
+    video{
+        width: 355px;
+    }
+    .explore{
+        top: 680px;
+        left: 90px;
+
+    }
+    .explore a{
+        font-size: 17px;
+        width: 200px;
+        padding: 3px;
+    }  */
+}

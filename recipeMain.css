@@ -1,0 +1,51 @@
+#recipe{
+    grid-row: 2/3;
+    height: 100vh;
+}
+.description{
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+
+}
+
+.pics{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 6%;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.grid-item{
+    text-decoration: none;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 50px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    position: relative;
+}
+
+.grid-item img{
+    width: 75%;
+    height: 75%;
+    border-radius: 3%;
+}
+
+.hover{
+    position: absolute;
+    left:0;
+    top: 0;
+    opacity: 0;
+}
+
+.grid-item:hover{
+    transform: scale(1.2);
+    text-decoration: underline;  
+}
+

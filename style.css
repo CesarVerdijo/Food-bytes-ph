@@ -1,0 +1,100 @@
+html{
+scroll-behavior: smooth;
+
+
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image:linear-gradient(to top,rgba(0, 0, 0, 0.557),rgba(0, 0, 0, 0.735)), url(bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    color: white;
+}
+/* header and navbar */
+
+header{
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(rgb(7, 1, 1),rgba(0, 0, 0, 0.061));
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+}
+label, input{
+    display: none;
+}
+header:hover{
+background: linear-gradient(rgba(235, 231, 231, 0.571),rgba(0, 0, 0, 0.061));
+transition: .9s ease ease-in-out;
+}
+.logo{
+    margin-left: 20px;
+}
+.logo > img{
+    width: 250px;
+    height: 80px;
+}
+nav{
+    padding-right: 50px;
+    max-width: none;
+}
+nav ul li a, label{
+    color: white;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 10px;
+}
+nav ul li a:hover{
+    color: #F5931F;
+    transition: .4s ease;
+    border: 1px solid #819F40;
+}
+
+
+
+
+
+/* recipe */
+.recipes img{
+    height: 200px;
+    width: 200px;
+    margin-left: 50px;
+}
+.recipes img:hover{
+    border: 1px solid black;
+    transform: scale(1.5);
+    transition: .2s ease;
+}
+.text{
+    position: absolute;
+    left: 130px;
+    top: 150px;
+    color: white;
+    display: none;
+}
+.recipes:hover .text{
+    display: block;
+
+}
