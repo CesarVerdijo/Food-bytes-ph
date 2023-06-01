@@ -1,0 +1,270 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image:linear-gradient(to top,rgba(0, 0, 0, 0.557),rgba(0, 0, 0, 0.735)), url(pork.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    color: white;
+}
+
+/* header and nav-bar */
+
+
+header{
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(rgb(7, 1, 1),rgba(0, 0, 0, 0.061));
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+}
+label, input{
+    display: none;
+}
+header:hover{
+background: linear-gradient(rgba(235, 231, 231, 0.571),rgba(0, 0, 0, 0.061));
+transition: .9s ease ease-in-out;
+}
+.logo{
+    margin-left: 20px;
+}
+.logo > img{
+    width: 250px;
+    height: 80px;
+}
+nav{
+    padding-right: 50px;
+    max-width: none;
+}
+nav ul li a, label{
+    color: white;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 10px;
+}
+nav ul li a:hover{
+    color: #F5931F;
+    transition: .4s ease;
+    border: 1px solid #819F40;
+}
+
+
+
+/* main */
+
+main{
+    color: white;
+}
+
+.description{
+    margin-top: 7%;
+    margin-left: 3%;
+    font-family: 'Playfair Display', serif;
+    font-size: 75px;
+
+}
+
+
+
+/* recipe card */
+
+.card , .card2, .card3{
+    width: 60%;
+    height: 750px;
+    border-radius: 28px;
+    overflow:hidden;
+    position: relative;
+    flex-direction: row;
+} 
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* recipe card hover */
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.card-body{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -103%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.529);
+    backdrop-filter: blur(7px);
+    border-radius: 15px;
+    color: white;
+    transition: 0.5s;
+    padding: 10px;
+}
+.card-body2, .card-body3, .card-body4{
+    display: none;
+}
+
+
+.card:hover .card-body{
+    right: 0;
+}
+.card2:hover .card-body{
+    right: 0;
+}
+.card3:hover .card-body{
+    right: 0;
+}
+
+.card-title{
+    margin-left: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+@media screen and (max-width: 480px) {
+    .logo{
+        margin-left: 0;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    main{
+        grid-template-columns: 1fr;
+    }
+    
+    label{
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+    header{
+        padding: 5px;
+        z-index: 1;
+}
+    nav{
+        position: absolute;
+        background: rgba(0, 0, 0, 0.866);
+        top: 70px;
+        right: 13px;
+        width: 190px;
+        padding: 10px;
+        border-radius: 10px;
+        visibility: hidden;
+        opacity: 0;
+        transition: .4s ease;
+    }
+    nav ul li a{
+        font-weight: 700;
+    }
+    nav ul li a, nav label{
+        color: rgb(252, 252, 252);
+    }
+    nav label{
+        text-align: right;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    input:checked ~ nav{
+        visibility: visible;
+        opacity: 1;
+    }
+    .description{
+        margin-top: 100px;
+        font-size: 30px;
+        text-align: center;
+    }
+    .body{
+        display: grid;
+        grid-template-rows: 250px 1fr 250px 1fr 250px 1fr;
+        gap: 0;
+        padding: 10px;
+        width: 455px;
+    }
+    .card{
+        height: 250px;
+        padding: 10px;
+        width: 455px;
+    }
+    .card2{
+        grid-row: 3/4;
+        height: 220px;
+        padding: 10px;
+        width: 455px;
+    }
+    .card3{
+        grid-row: 5/6;
+        height: 250px;
+        padding: 10px;
+        width: 455px;
+    }
+    .card img{
+        height: 250px;
+        width: inherit;
+    }
+    .card2 img{
+        height: 255px;
+        width: inherit;
+    }
+    .card3 img{
+        height: 300pxpx;
+        width: inherit;
+    }
+    .card-body{
+        display: initial;
+        width: 455px;
+    }
+    .card:hover .card-body{
+        right: initial;
+    }
+    .card2:hover .card-body{
+        right: initial;
+    }
+    .card3:hover .card-body{
+        right: initial;
+    }
+    .card-body2{
+        grid-row: 2/3;
+        display: block;
+    }
+    .card-body3{
+        grid-row: 4/5;
+        display: block;
+    }
+    .card-body4{
+        grid-row: 6/7;
+        display: block;
+    }
+
+
+}
